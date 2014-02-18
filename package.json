@@ -1,9 +1,10 @@
 {
   "name": "dothiv",
-  "title": "dothiv",
+  "title": "dotHIV",
   "id": "jid1-BcXUnET21omvoQ",
   "description": "a basic add-on",
+  "icon": "icon.png",
   "author": "",
   "license": "MPL 2.0",
-  "version": "0.1"
+  "version": "1.0"
 }
