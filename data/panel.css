@@ -1,0 +1,184 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+@font-face {
+  font-family: "SourceSansPro Regular";
+  src: url("fonts/SourceSansPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "SourceSansPro Light";
+  src: url("fonts/SourceSansPro-Light.ttf");
+}
+
+body {
+  position: relative;
+  width: 240px;
+  font-family: "SourceSansPro Regular";
+}
+
+section {
+  text-align: center;
+  font-size: 95%;
+}
+
+section:not(:first-of-type)::before {
+  content: "";
+  display: block;
+  width: 170px;
+  margin: 20px auto;
+  border-top: 1px solid rgb(237,237,237);
+  border-bottom: 1px solid rgb(250,250,250);
+}
+
+a, a:visited, a:focus {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* HEADER */
+
+header {
+  position: relative;
+  height: 72px;
+  margin-bottom: 30px;
+}
+
+header::before {
+  content: "";
+  display: block;
+  height: 45px;
+  border-bottom: 1px solid rgb(212,212,212);
+  background-color: rgb(237,237,237);
+  box-shadow: 0 1px 1px rgb(237,237,237);
+}
+
+#logo {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  width: 80px;
+  height: 54px;
+  margin-left: -40px;
+  border: 1px solid rgb(230,230,230);
+  background-image: url(images/logo.png);
+  background-size: cover;
+  box-shadow: 1px 1px 1px rgb(230,230,230);
+}
+
+/* SECTION: STATUS */
+
+#status {
+ line-height: 1.5em;
+ white-space: pre-line;
+}
+
+.dot-hiv {
+ color: rgb(226,0,121);
+}
+
+/* SECTION: REDIRECTS */
+
+#redirects {
+  color: rgb(150,150,150);
+}
+
+#redirects-chk {
+  vertical-align: bottom;
+}
+
+/* SECTION: SHARE */
+
+#share-items {
+  padding: 0;
+  width: 184px;
+  margin: 10px auto 0;
+  list-style-type: none;
+  font-size: 0;
+}
+
+.share-item {
+  display: inline-block;
+  background-size: cover;
+}
+
+.share-item:not(:last-child) {
+  margin-right: 6px;
+}
+
+.share-item:hover {
+  box-shadow: 0 0 2px rgb(146,146,146);
+}
+
+.share-item-fb {
+  background-image: url(images/share/fb.png);
+}
+
+.share-item-gplus {
+  background-image: url(images/share/gplus.png);
+}
+
+.share-item-twitter {
+  background-image: url(images/share/twitter.png);
+}
+
+.share-item-linkedin {
+  background-image: url(images/share/linkedin.png);
+}
+
+.share-item-email {
+  background-image: url(images/share/email.png);
+}
+
+@media (min-resolution: 2dppx) {
+  .share-item-fb {
+    background-image: url(images/share/fb@2x.png);
+  }
+
+  .share-item-gplus {
+    background-image: url(images/share/gplus@2x.png);
+  }
+
+  .share-item-twitter {
+    background-image: url(images/share/twitter@2x.png);
+  }
+
+  .share-item-linkedin {
+    background-image: url(images/share/linkedin@2x.png);
+  }
+
+  .share-item-email {
+    background-image: url(images/share/email@2x.png);
+  }
+}
+
+.share-link {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+/* FOOTER */
+
+footer {
+  height: 35px;
+  margin-top: 20px;
+  line-height: 30px;
+  text-align: center;
+  background-color: rgb(237,237,237);
+  border-top: 1px solid rgb(212,212,212);
+  box-shadow: 0 -1px 1px rgb(237,237,237);
+}
+
+#footer-link,
+#footer-link:visited {
+  color: rgb(146,146,146);
+  font-size: 75%;
+  font-family: "SourceSansPro Light";
+}
