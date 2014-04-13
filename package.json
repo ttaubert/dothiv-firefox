@@ -3,6 +3,7 @@
   "title": "dotHIV",
   "id": "jid1-BcXUnET21omvoQ",
   "description": "a basic add-on",
+  "permissions": {"private-browsing": true},
   "icon": "icon.png",
   "author": "",
   "license": "MPL 2.0",
