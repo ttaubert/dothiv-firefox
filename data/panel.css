@@ -73,6 +73,12 @@ header::before {
   box-shadow: 1px 1px 1px rgb(230,230,230);
 }
 
+@media (min-resolution: 2dppx) {
+  #logo {
+    background-image: url(images/logo@2x.png);
+  }
+}
+
 /* SECTION: STATUS */
 
 #status {
