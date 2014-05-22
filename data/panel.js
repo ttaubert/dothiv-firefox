@@ -17,8 +17,16 @@ addEventListener("click", function (event) {
   }
 });
 
+let checkbox = document.getElementById("redirects-chk");
+
 // Notify the parent when redirects have been enabled or disabled.
-let chk = document.getElementById("redirects-chk");
-chk.addEventListener("change", function () {
-  self.port.emit("toggle", chk.checked);
+checkbox.addEventListener("change", function () {
+  self.port.emit("toggle", checkbox.checked);
+});
+
+// Update the checkbox state when the add-on loads.
+self.port.on("toggle", function (enabled) {
+  if (checkbox.checked != enabled) {
+    checkbox.checked = enabled;
+  }
 });
