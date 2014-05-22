@@ -4,10 +4,8 @@
 
 // Let the parent know our dimensions so that
 // the panel has the same size as the content.
-addEventListener("load", function () {
-  let {offsetWidth: width, offsetHeight: height} = document.body;
-  self.port.emit("load", {width: width, height: height});
-});
+let {offsetWidth: width, offsetHeight: height} = document.body;
+self.port.emit("ready", {width: width, height: height});
 
 // Hide the panel after opening a new tab.
 addEventListener("click", function (event) {
