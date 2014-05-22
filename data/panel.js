@@ -16,3 +16,9 @@ addEventListener("click", function (event) {
     self.port.emit("navigate", event.target.getAttribute("href"));
   }
 });
+
+// Notify the parent when redirects have been enabled or disabled.
+let chk = document.getElementById("redirects-chk");
+chk.addEventListener("change", function () {
+  self.port.emit("toggle", chk.checked);
+});
