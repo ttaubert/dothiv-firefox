@@ -1,12 +1,13 @@
 {
   "name": "dothiv",
-  "title": "dotHIV",
+  "title": "dotHIV - the Digital Red Ribbon",
   "id": "jid1-BcXUnET21omvoQ",
-  "description": "a basic add-on",
+  "description": "Discover the global network of dotHIV - the Red Ribbon of the digital age.",
   "permissions": {"private-browsing": true},
   "icon": "icon.png",
   "icon64": "icon64.png",
-  "author": "",
+  "author": "dotHIV <mail@dothiv.org>",
+  "homepage": "http://www.dothiv.org/",
   "license": "MPL 2.0",
   "version": "1.0"
 }
