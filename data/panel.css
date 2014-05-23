@@ -16,7 +16,7 @@ body {
   position: relative;
   width: 240px;
   font-family: "SourceSansPro Regular";
-  -moz-user-input: none;
+  font-size: 16px;
 }
 
 section {
