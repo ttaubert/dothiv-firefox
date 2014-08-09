@@ -2,10 +2,8 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-// Let the parent know our dimensions so that
-// the panel has the same size as the content.
-let {offsetWidth: width, offsetHeight: height} = document.body;
-self.port.emit("ready", {width: width, height: height});
+// Let the parent know we're ready.
+self.port.emit("ready");
 
 // Hide the panel after opening a new tab.
 addEventListener("click", function (event) {
@@ -27,4 +25,17 @@ self.port.on("toggle", function (enabled) {
   if (checkbox.checked != enabled) {
     checkbox.checked = enabled;
   }
+});
+
+// Update the panel's locale.
+self.port.on("locale", function (locale) {
+  let toRemove = document.querySelectorAll("[lang]:not([lang=" + locale + "])");
+  for (let elem of toRemove) {
+    elem.remove();
+  }
+
+  // Let the parent know our dimensions so that
+  // the panel has the same size as the content.
+  let {offsetWidth: width, offsetHeight: height} = document.body;
+  self.port.emit("resize", {width: width, height: height});
 });
